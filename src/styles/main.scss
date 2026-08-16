@@ -12,6 +12,7 @@ body {
 }
 
 .calendar {
+  width: 722px;
   display: flex;
   flex-wrap: wrap;
   gap: 1px;
@@ -29,6 +30,7 @@ body {
     transition: all 0.5s;
 
     &:hover {
+      cursor: pointer;
       transform: translateY(-20px);
       background-color: #ffbfcb;
     }
