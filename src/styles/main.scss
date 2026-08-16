@@ -48,7 +48,7 @@ body {
 
   @each $day in $days {
     $index: list.index($days, $day) - 1;
-    
+
     &--start-day-#{$day} &__day:first-child {
       margin-left: calc($index * (var(--block-size) + 1px));
     }
