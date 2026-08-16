@@ -43,4 +43,19 @@ body {
       font-size: 30px;
     }
   }
+
+  $days: mon, tue, wed, thu, fri, sat, sun;
+
+  @each $day in $days {
+    $index: list.index($days, $day) - 1;
+    &--start-day-#{$day} &__day:first-child {
+      margin-left: calc($index * (var(--block-size) + 1px));
+    }
+  }
+
+  @for $i from 28 through 31 {
+    &--month-length-#{$i} &__day:nth-child(n + #{$i + 1}) {
+      display: none;
+    }
+  }
 }
